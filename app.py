@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GREAT ZAHIR FF BAN TOOL • PREMIUM EDITION • v2.2 (OB55)
+GREAT SHIFAT FF BAN TOOL • PREMIUM EDITION • v2.2 (OB55)
 Powered by GREAT SHIFAT 
 """
 
@@ -123,20 +123,20 @@ def get_jwt_from_uid_pass(uid, password):
     for url in apis:
         try:
             domain = url.split('/')[2]
-            print(f"    {Color.dim}▸ trying {domain}{Color.reset}")
+            print(f"    {Color.dim}➔ trying {domain}{Color.reset}")
             r = requests.get(url, timeout=15, verify=False)
             if r.status_code == 200:
                 data = r.json()
                 tok = data.get("token") or data.get("access_token") or data.get("jwt")
                 if tok:
-                    print(f"    {Color.bright_gold}▸ token from {domain}{Color.reset}")
+                    print(f"    {Color.bright_gold}➔ token from {domain}{Color.reset}")
                     return tok, None
                 else:
-                    print(f"    {Color.red}▸ no token in {domain}: {str(data)[:80]}{Color.reset}")
+                    print(f"    {Color.red}➔ no token in {domain}: {str(data)[:80]}{Color.reset}")
             else:
-                print(f"    {Color.red}▸ {domain} HTTP {r.status_code}{Color.reset}")
+                print(f"    {Color.red}➔ {domain} HTTP {r.status_code}{Color.reset}")
         except Exception as e:
-            print(f"    {Color.red}▸ {domain} error: {e}{Color.reset}")
+            print(f"    {Color.red}➔ {domain} error: {e}{Color.reset}")
             continue
     return None, "Both JWT APIs failed"
 
@@ -419,17 +419,17 @@ def print_header():
     print()
     print(f"{red}╔{'═' * (w - 2)}╗{Color.reset}")
     print(row())
-    print(row(f"{gold}{Color.bold} ██████╗ ██████╗ ███████╗ █████╗ ████████╗    ███████╗ █████╗ ██╗  ██╗██╗██████╗ {Color.reset}"))
-    print(row(f"{gold}{Color.bold}██╔════╝ ██╔══██╗██╔════╝██╔══██╗╚══██╔══╝    ╚══███╔╝██╔══██╗██║  ██║██║██╔══██╗{Color.reset}"))
-    print(row(f"{gold}{Color.bold}██║  ███╗██████╔╝█████╗  ███████║   ██║         ███╔╝ ███████║███████║██║██████╔╝{Color.reset}"))
-    print(row(f"{gold}{Color.bold}██║   ██║██╔══██╗██╔══╝  ██╔══██║   ██║        ███╔╝  ██╔══██║██╔══██║██║██╔══██╗{Color.reset}"))
-    print(row(f"{gold}{Color.bold}╚██████╔╝██║  ██║███████╗██║  ██║   ██║       ███████╗██║  ██║██║  ██║██║██║  ██║{Color.reset}"))
-    print(row(f"{gold}{Color.bold} ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝       ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝{Color.reset}"))
+    print(row(f"{gold}{Color.bold} ██████╗ ██████╗ ███████╗ █████╗ ████████╗    ███████╗██╗  ██╗██╗███████╗ █████╗ ████████╗{Color.reset}"))
+    print(row(f"{gold}{Color.bold}██╔════╝ ██╔══██╗██╔════╝██╔══██╗╚══██╔══╝    ██╔════╝██║  ██║██║██╔════╝██╔══██╗╚══██╔══╝{Color.reset}"))
+    print(row(f"{gold}{Color.bold}██║  ███╗██████╔╝█████╗  ███████║   ██║       ███████╗███████║██║█████╗  ███████║   ██║   {Color.reset}"))
+    print(row(f"{gold}{Color.bold}██║   ██║██╔══██╗██╔══╝  ██╔══██║   ██║       ╚════██║██╔══██║██║██╔══╝  ██╔══██║   ██║   {Color.reset}"))
+    print(row(f"{gold}{Color.bold}╚██████╔╝██║  ██║███████╗██║  ██║   ██║       ███████║██║  ██║██║██║     ██║  ██║   ██║   {Color.reset}"))
+    print(row(f"{gold}{Color.bold} ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝       ╚══════╝╚═╝  ╚═╝╚═╝╚═╝     ╚═╝  ╚═╝   ╚═╝   {Color.reset}"))
     print(row())
     print(f"{red}╠{'═' * (w - 2)}╣{Color.reset}")
     print(row())
     print(row(f"{red}🔥  P R E M I U M   E D I T I O N   •   v 2 . 2   •   O B 5 5  🔥{Color.reset}"))
-    print(row(f"{gold}⚡   P O W E R E D   B Y   G R E A T   SHIFAT  ⚡{Color.reset}"))
+    print(row(f"{gold}⚡   P O W E R E D   B Y   G R E A T   S H I F A T  ⚡{Color.reset}"))
     print(row())
     print(f"{red}╚{'═' * (w - 2)}╝{Color.reset}")
     print()
@@ -452,8 +452,8 @@ def print_file_prompt():
     print(f"{red}╔{'═' * (w - 2)}╗{Color.reset}")
     for txt in (
         "📂  ENTER PATH TO ACCOUNT FILE (.json or .txt)",
-        "👉  JSON format:  [ { \"uid\": \"...\", \"password\": \"...\" } ]",
-        "👉  TXT format :  uid:password   (one per line)",
+        "👇  JSON format:  [ { \"uid\": \"...\", \"password\": \"...\" } ]",
+        "👇  TXT format :  uid:password   (one per line)",
     ):
         pad = w - 2 - visual_len(txt) - 4
         print(f"{red}║{Color.reset}    {Color.bright_gold}{txt}{Color.reset}{' ' * max(pad, 0)}    {red}║{Color.reset}")
@@ -466,7 +466,7 @@ def print_token_prompt():
     print(f"{red}╔{'═' * (w - 2)}╗{Color.reset}")
     for txt in (
         "🔑  PASTE JWT TOKEN  (eyJ...)  OR  ACCESS TOKEN (hex)",
-        "👉  Press ENTER on empty line to cancel",
+        "👇  Press ENTER on empty line to cancel",
     ):
         pad = w - 2 - visual_len(txt) - 4
         print(f"{red}║{Color.reset}    {Color.bright_gold}{txt}{Color.reset}{' ' * max(pad, 0)}    {red}║{Color.reset}")
@@ -486,10 +486,10 @@ def _ban_one(jwt_tok):
 
     print_big_box(
         [
-            f"{Color.bright_gold}◈ Name    : {Color.bold}{nick}{Color.reset}",
-            f"{Color.bright_gold}◈ UID     : {acc_id}{Color.reset}",
-            f"{Color.bright_gold}◈ Region  : {user.get('lock_region', 'N/A')}{Color.reset}",
-            f"{Color.bright_gold}◈ Version : {ver}{Color.reset}",
+            f"{Color.bright_gold}◉ Name    : {Color.bold}{nick}{Color.reset}",
+            f"{Color.bright_gold}◉ UID     : {acc_id}{Color.reset}",
+            f"{Color.bright_gold}◉ Region  : {user.get('lock_region', 'N/A')}{Color.reset}",
+            f"{Color.bright_gold}◉ Version : {ver}{Color.reset}",
         ],
         title=" TARGET INFO ",
     )
@@ -497,7 +497,7 @@ def _ban_one(jwt_tok):
     resp = spinner_animation(
         "Injecting ban payload",
         lambda: trigger_injection(jwt_tok, ver),
-        style='◐◓◑◒',
+        style='⣾⣽⣻⢿',
     )
     return nick, acc_id, resp
 
@@ -510,8 +510,8 @@ def ban_from_file(file_path):
     total = len(accounts)
     print_big_box(
         [
-            f"{Color.bright_gold}◈ Total Accounts : {Color.bold}{total}{Color.reset}",
-            f"{Color.bright_gold}◈ Source File    : {file_path}{Color.reset}",
+            f"{Color.bright_gold}◉ Total Accounts : {Color.bold}{total}{Color.reset}",
+            f"{Color.bright_gold}◉ Source File    : {file_path}{Color.reset}",
         ],
         title=" LOADED ",
     )
@@ -579,13 +579,13 @@ def ban_direct_token(token):
 
     # Detect type
     if token.startswith("ey") and token.count(".") == 2:
-        print_big_box([f"{Color.bright_gold}◈ Detected : JWT token{Color.reset}"],
+        print_big_box([f"{Color.bright_gold}◉ Detected : JWT token{Color.reset}"],
                       title=" TOKEN TYPE ")
     elif re.fullmatch(r'[A-Fa-f0-9]{32,}', token):
-        print_big_box([f"{Color.bright_gold}◈ Detected : Hex access_token{Color.reset}"],
+        print_big_box([f"{Color.bright_gold}◉ Detected : Hex access_token{Color.reset}"],
                       title=" TOKEN TYPE ")
     else:
-        print_big_box([f"{Color.bright_red}◈ Unknown token format{Color.reset}",
+        print_big_box([f"{Color.bright_red}◉ Unknown token format{Color.reset}",
                        f"{Color.dim}Use JWT (ey...) or hex access token{Color.reset}"],
                       title=" TOKEN TYPE ")
         return
@@ -629,7 +629,7 @@ def ban_direct_token(token):
 def main():
     clear()
     print_header()
-    premium_loading("Initializing Great Zahir Core", duration=2.0)
+    premium_loading("Initializing GREAT SHIFAT Core", duration=2.0)
 
     while True:
         print()
@@ -637,7 +637,7 @@ def main():
         choice = input().strip()
 
         if choice == '0' or choice.upper() in ('Q', 'EXIT', 'QUIT'):
-            print(Color.dim + "\n  Goodbye — Great Zahir\n" + Color.reset)
+            print(Color.dim + "\n  Goodbye — GREAT SHIFAT\n" + Color.reset)
             sys.exit(0)
 
         if choice == '1':
